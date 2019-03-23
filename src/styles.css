@@ -1,0 +1,90 @@
+/* You can add global styles to this file, and also import other style files */
+
+* {
+   --bombmaker-skin: #FFFFFF;
+}
+
+@font-face {
+    font-family: 'Digital';
+    src: url('assets/fonts/Digital.ttf') format('truetype');
+}
+
+body {
+    background-color: #000000;   
+    font-family: 'Digital', monospace; 
+    text-align: center;
+    color: var(--bombmaker-skin, #FFFFFF);
+}
+
+h1 {
+    font-size: 75px;
+}
+
+h2 {
+    font-size: 30px;    
+}
+
+header {
+    height: 60px;
+    margin-bottom: 100px;
+}
+.container {
+    height: 660px;
+}
+
+button {
+    background: none;
+    border: 2px solid var(--bombmaker-skin, #FFFFFF);    
+    color: var(--bombmaker-skin, #FFFFFF);
+    outline: none;
+    font-size: 20px;
+    border-radius: 0;
+    padding: 10px;
+}
+
+.boxform {
+    font-size: 25px;
+    color: var(--bombmaker-skin, #FFFFFF);
+}
+
+.rowTime {
+    margin-bottom: 41px;
+}
+
+.rowTime div {
+    overflow: hidden;
+    margin-bottom: 10px; 
+}
+
+.boxform .rowTime span.timeTitle {
+    font-size: 25px;         
+}
+
+.boxform .rowTime button {  
+    font-size: 30px; 
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    padding: 0px;
+}
+
+span.timeSet {
+    padding: 20px;
+}
+
+.counterTime {
+    font-size: 100px;
+    height: 300px;
+}
+
+.counterTime img {
+    width: 300px; 
+    margin-top: -70px;
+    /* no es lo mejor */   
+}
+
+footer {
+    height: 20px;
+    font-size: 14px;
+    font-family: monospace;
+}

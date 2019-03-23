@@ -1,0 +1,8 @@
+<h2>{{startMessage}}</h2>
+<div class="counterTime">    
+    <p *ngIf="showCounter">{{hours | number:'2.0'}} : {{minutes | number:'2.0'}} : {{seconds | number:'2.0'}}</p>
+    <p *ngIf="showMessage"><img src="/assets/images/boom.png" alt="BOOOOOOOM!"></p>
+</div>
+<div>
+    <button (click)="goBack()" *ngIf="showDeactivateButton">{{messageGoback}}</button>
+</div>

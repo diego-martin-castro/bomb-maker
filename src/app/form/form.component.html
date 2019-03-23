@@ -1,0 +1,42 @@
+<section *ngIf="showBoxForm" class="boxform">
+  <h2>{{startMessage}}</h2>
+  
+  <section class="rowTime">
+    <div>
+      <span class="timeTitle">Hours</span> 
+    </div>
+    <div>
+      <button (click)="sumOne(hoursHtml, 'hours')">+</button>
+      <span #hoursHtml class="timeSet">{{setHours | number: '2.0'}}</span>
+      <button (click)="restOne(hoursHtml, 'hours')">-</button>
+    </div>
+  </section>
+
+  <section class="rowTime">
+    <div>
+      <span class="timeTitle">Minutes</span> 
+    </div>
+    <div>
+      <button (click)="sumOne(minutesHtml, 'minutes')">+</button>
+      <span #minutesHtml class="timeSet">{{setMinutes | number: '2.0'}}</span>
+      <button (click)="restOne(minutesHtml, 'minutes')">-</button>
+    </div>
+  </section>
+
+  <section class="rowTime">
+    <div>
+      <span class="timeTitle">Seconds</span>
+    </div>
+    <div>
+      <button (click)="sumOne(secondsHtml, 'seconds')">+</button>
+        <span #secondsHtml class="timeSet">{{setSeconds | number: '2.0'}}</span>
+      <button (click)="restOne(secondsHtml, 'seconds')">-</button>
+    </div>
+  </section>
+
+  <button (click)="activateBomb()" [disabled]="deactivateBtn">{{msgActiveBtn}}</button>  
+</section>
+
+<section *ngIf="showBoxCounter">
+  <app-counter (messageEvent)="receiveMessage($event)" [hours]="setHours" [minutes]="setMinutes" [seconds]="setSeconds"></app-counter>  
+</section>
